@@ -23,8 +23,6 @@ public class Observer : MonoBehaviour
         }
     }
 
-
-
     void Update()
     {
         if (m_IsPlayerInRange)
