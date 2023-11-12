@@ -458,6 +458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8870066437407534065}
   - component: {fileID: 8870066437396200149}
+  - component: {fileID: 753123486314030284}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -547,6 +548,27 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.47393298, y: 0, z: -0.04242532}
     m_Extent: {x: 0.66882896, y: 0.26527417, z: 0.43575078}
   m_DirtyAABB: 0
+--- !u!95 &753123486314030284
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8870066437407766481}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c4da8283d06faa94ea4ae2e8b7e060d8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8870066437407766483
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,6 +583,7 @@ GameObject:
   - component: {fileID: 3375187638273903194}
   - component: {fileID: 3066948257644337478}
   - component: {fileID: -496929310289335569}
+  - component: {fileID: 8852881237100844160}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -596,7 +619,7 @@ Animator:
   m_GameObject: {fileID: 8870066437407766483}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 563ac48ff656d49478fd93213f4c0eb8, type: 3}
-  m_Controller: {fileID: 9100000, guid: 9469715920b8dd74d8598e60c747ce92, type: 2}
+  m_Controller: {fileID: 9100000, guid: c4da8283d06faa94ea4ae2e8b7e060d8, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -646,12 +669,12 @@ NavMeshAgent:
   m_GameObject: {fileID: 8870066437407766483}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
+  m_Radius: 0.25
+  m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -755,6 +778,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8852881237100844160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8870066437407766483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53d851566326624e984b247b08715a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navMeshAgent: {fileID: 3066948257644337478}
+  waypoints: []
 --- !u!1 &8870066437407766485
 GameObject:
   m_ObjectHideFlags: 0
